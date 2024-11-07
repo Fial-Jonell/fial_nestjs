@@ -8,11 +8,11 @@ function fibonacci(n) {
   
   module.exports = {
     getFibonacciSequence: (req, res) => {
-      const n = parseInt(req.params.n, 10); // Get the value of n from URL params
+      const n = parseInt(req.params.n, 10); 
       if (isNaN(n) || n <= 0) {
         return res.status(400).json({ error: "Invalid input. Please provide a positive integer." });
       }
-      const sequence = fibonacci(n); // Get Fibonacci sequence
-      return res.json({ sequence }); // Return the sequence as JSON
+      const sequence = fibonacci(n); 
+      return res.json({ sequence }); 
     }
   };
